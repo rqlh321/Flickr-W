@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">getPicsFromFlickr</string>
+
+    <string name="new_on_flikr">Show me new stuff</string>
+    <string name="show_cache">Show my cached files</string>
+
+    <string name="search_in_flickr">Search in Flickr</string>
+    <string name="search_in_list">Search in current list</string>
+
+    <string name="add">Add from gallery</string>
+
+    <string name="clear_search">Clear list</string>
+    <string name="clear_cache">Clear cache</string>
+</resources>

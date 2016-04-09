@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/show_new"
+        android:title="@string/new_on_flikr"
+        android:icon="@android:drawable/ic_media_play"
+        android:showAsAction="never"
+        />
+    <item android:id="@+id/show_my_cached"
+        android:title="@string/show_cache"
+        android:icon="@android:drawable/ic_media_play"
+        android:showAsAction="never"
+        />
+    <item android:id="@+id/search_in_flickr"
+        android:title="@string/search_in_flickr"
+        android:icon="@android:drawable/ic_menu_search"
+        android:showAsAction="withText"
+        />
+    <item android:id="@+id/search_in_list"
+        android:title="@string/search_in_list"
+        android:icon="@android:drawable/ic_menu_search"
+        android:showAsAction="withText"
+        />
+    <item android:id="@+id/add_from_gallery"
+        android:title="@string/add"
+        android:icon="@android:drawable/ic_menu_add"
+        android:showAsAction="never"
+        />
+    <item android:id="@+id/menu_item_clear"
+        android:title="@string/clear_search"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:showAsAction="never"
+        />
+    <item android:id="@+id/cache_clear"
+        android:title="@string/clear_cache"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:showAsAction="never"
+        />
+</menu>
