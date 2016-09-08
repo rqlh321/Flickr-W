@@ -3,22 +3,7 @@ package com.example.sic.getpicsfromflickr;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class GalleryItem implements Parcelable{
-    private String mCaption;
-    private String mUrl;
-
-    public GalleryItem(String name ,String url) {
-        this.mCaption=name;
-        this.mUrl=url;
-    }
-
-    protected GalleryItem(Parcel in) {
-        String[] data = new String[2];
-        in.readStringArray(data);
-        mCaption = data[0];
-        mUrl = data[1];
-    }
-
+public class GalleryItem implements Parcelable {
     public static final Creator<GalleryItem> CREATOR = new Creator<GalleryItem>() {
         @Override
         public GalleryItem createFromParcel(Parcel in) {
@@ -30,6 +15,20 @@ public class GalleryItem implements Parcelable{
             return new GalleryItem[size];
         }
     };
+    private String mCaption;
+    private String mUrl;
+
+    public GalleryItem(String name, String url) {
+        this.mCaption = name;
+        this.mUrl = url;
+    }
+
+    protected GalleryItem(Parcel in) {
+        String[] data = new String[2];
+        in.readStringArray(data);
+        mCaption = data[0];
+        mUrl = data[1];
+    }
 
     public String getCaption() {
         return mCaption;
@@ -46,6 +45,6 @@ public class GalleryItem implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeStringArray(new String[] {mCaption,mUrl});
+        parcel.writeStringArray(new String[]{mCaption, mUrl});
     }
 }

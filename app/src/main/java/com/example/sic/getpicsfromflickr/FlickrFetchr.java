@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class FlickrFetchr {
     public static final String TAG = "FlickrFetchr";
     private static final String ENDPOINT = "https://api.flickr.com/services/rest/";
-    private static final String API_KEY = "USE_YOUR_OWN_API_KEY!";
+    private static final String API_KEY = "be00e7f9fb70df90a8037ed1e3ea2e66";
     private static final String METHOD_GET_RECENT = "flickr.photos.getRecent";
     private static final String PARAM_EXTRAS = "extras";
     private static final String EXTRA_SMALL_URL = "url_s";

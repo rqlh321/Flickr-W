@@ -1,47 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="1">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/padding_for_item"
+    android:paddingRight="@dimen/padding_for_item"
+    android:paddingTop="@dimen/padding_for_item">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/folder_preview_image"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/folder_text"
+        style="@style/FolderListItemTextView"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:padding="8dp"
-        android:id="@+id/object_delete_view"
-        android:orientation="horizontal" >
+        android:layout_height="wrap_content" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-           />
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:padding="8dp"
-        android:weightSum="1"
-        android:background="#ffebeff1"
-        android:id="@+id/object_main_view"
-        android:orientation="horizontal" >
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/imageView"/>
-
-        <TextView
-            android:layout_width="280dp"
-            android:layout_height="100dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/picTitle" />
-
-    </LinearLayout>
-</RelativeLayout>
+</LinearLayout>
