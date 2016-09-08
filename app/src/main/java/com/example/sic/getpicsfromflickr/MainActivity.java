@@ -23,9 +23,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     final static String FOLDER_TO_SAVE_PICS = Environment.getExternalStorageDirectory().toString() + "/" + R.string.app_name;
     private static final int REQUEST = 1;
-
     RecycleViewListAdapter adapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +33,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         File checkDir = new File(FOLDER_TO_SAVE_PICS);
+
         if (!checkDir.exists()) {
             checkDir.mkdirs();
         }
+
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.listView);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         adapter = new RecycleViewListAdapter(this);
-        adapter.setRecycleView(recyclerView);
         recyclerView.setAdapter(adapter);
     }
 
@@ -124,9 +123,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(ArrayList<GalleryItem> items) {
+        protected void onPostExecute(final ArrayList<GalleryItem> items) {
             adapter.refreshList(items);
-
         }
     }
 

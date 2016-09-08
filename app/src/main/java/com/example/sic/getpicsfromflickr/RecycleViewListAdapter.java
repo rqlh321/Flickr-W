@@ -5,12 +5,9 @@ import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -53,18 +50,18 @@ public class RecycleViewListAdapter extends RecyclerView.Adapter<RecycleViewList
                 alertDialog.setTitle(context.getString(R.string.share));
                 LayoutInflater layoutInflater = LayoutInflater.from(context);
                 View shareView = layoutInflater.inflate(R.layout.share_preview, null);
-                ShareButton shareButton= (ShareButton) shareView.findViewById(R.id.fb_share_button);
+                ShareButton shareButton = (ShareButton) shareView.findViewById(R.id.fb_share_button);
                 ShareLinkContent content = new ShareLinkContent.Builder()
-                        .setContentUrl(Uri.parse("https://www.facebook.com/profile.php?id=100012460260436"))
+                        .setContentUrl(Uri.parse("https://www.flickr.com"))
                         .setImageUrl(Uri.parse(list.get(position).getUrl()))
                         .setContentTitle("Look what i found on Flickr")
                         .setContentDescription(list.get(position).getCaption())
                         .build();
                 shareButton.setShareContent(content);
-                ImageView previewImage= (ImageView) shareView.findViewById(R.id.preview_image);
+                ImageView previewImage = (ImageView) shareView.findViewById(R.id.preview_image);
                 Glide.with(context)
                         .load(list.get(position).getUrl())
-                        .bitmapTransform(new RoundedCornersTransformation(context,10,10))
+                        .bitmapTransform(new RoundedCornersTransformation(context, 10, 10))
                         .into(previewImage);
                 alertDialog.setView(shareView);
                 alertDialog.show();
@@ -91,10 +88,6 @@ public class RecycleViewListAdapter extends RecyclerView.Adapter<RecycleViewList
     public void clear() {
         list.clear();
         notifyDataSetChanged();
-    }
-
-    public void setRecycleView(RecyclerView view) {
-        recyclerView = view;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
