@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.sic.getpicsfromflickr.Model.Photo;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareButton;
 
@@ -20,9 +21,8 @@ import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 public class RecycleViewListAdapter extends RecyclerView.Adapter<RecycleViewListAdapter.ViewHolder> {
-    ArrayList<GalleryItem> list = new ArrayList<>();
-    RecyclerView recyclerView;
-    Context context;
+    private ArrayList<Photo> list = new ArrayList<>();
+    private Context context;
 
     public RecycleViewListAdapter(Context context) {
         this.context = context;
@@ -39,8 +39,7 @@ public class RecycleViewListAdapter extends RecyclerView.Adapter<RecycleViewList
         holder.folderText.setText(list.get(position).getCaption());
         Glide.with(context)
                 .load(list.get(position).getUrl())
-                .animate(R.anim.pop_enter)
-                .bitmapTransform(new CropCircleTransformation(context))
+                .bitmapTransform(new RoundedCornersTransformation(context, 5, 5))
                 .into(holder.folderCover);
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +60,6 @@ public class RecycleViewListAdapter extends RecyclerView.Adapter<RecycleViewList
                 ImageView previewImage = (ImageView) shareView.findViewById(R.id.preview_image);
                 Glide.with(context)
                         .load(list.get(position).getUrl())
-                        .bitmapTransform(new RoundedCornersTransformation(context, 10, 10))
                         .into(previewImage);
                 alertDialog.setView(shareView);
                 alertDialog.show();
@@ -75,19 +73,18 @@ public class RecycleViewListAdapter extends RecyclerView.Adapter<RecycleViewList
         return list.size();
     }
 
-    public void refreshList(ArrayList<GalleryItem> newList) {
-        list = newList;
-        notifyDataSetChanged();
-    }
-
-    public void add(GalleryItem item) {
-        list.add(0, item);
+    public void addAll(ArrayList<Photo> newList) {
+        list.addAll(newList);
         notifyDataSetChanged();
     }
 
     public void clear() {
         list.clear();
         notifyDataSetChanged();
+    }
+
+    public ArrayList<Photo> getList() {
+        return list;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

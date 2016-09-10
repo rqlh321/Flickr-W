@@ -1,4 +1,4 @@
-package com.example.sic.getpicsfromflickr;
+package com.example.sic.getpicsfromflickr.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;

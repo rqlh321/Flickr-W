@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">getPicsFromFlickr</string>
 
-    <string name="new_on_flikr">Show me new stuff</string>
     <string name="search_in_flickr">Search in Flickr</string>
     <string name="add">Add from gallery</string>
     <string name="clear_search">Clear</string>
-    <string name="share">Share preview</string>
+    <string name="share">Preview</string>
+    <string name="greeting">Search pictures... Share pictures!</string>
 
     <string name="facebook_app_id">2082973865261073</string>
 </resources>
