@@ -4,8 +4,8 @@
     <string name="search_in_flickr">Search in Flickr</string>
     <string name="add">Add from gallery</string>
     <string name="clear_search">Clear</string>
-    <string name="share">Preview</string>
-    <string name="greeting">Search pictures... Share pictures!</string>
+    <string name="share">Share</string>
 
     <string name="facebook_app_id">2082973865261073</string>
+    <string name="google_api_key">AIzaSyA4ICilh9gttMWX2eKKlk-nelWgB-1RfJ4</string>
 </resources>

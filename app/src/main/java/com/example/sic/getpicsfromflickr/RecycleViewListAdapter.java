@@ -17,7 +17,6 @@ import com.facebook.share.widget.ShareButton;
 
 import java.util.ArrayList;
 
-import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 public class RecycleViewListAdapter extends RecyclerView.Adapter<RecycleViewListAdapter.ViewHolder> {
@@ -36,9 +35,9 @@ public class RecycleViewListAdapter extends RecyclerView.Adapter<RecycleViewList
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        holder.folderText.setText(list.get(position).getCaption());
+        holder.folderText.setText(list.get(position).getTitle());
         Glide.with(context)
-                .load(list.get(position).getUrl())
+                .load(list.get(position).getUrl_s())
                 .bitmapTransform(new RoundedCornersTransformation(context, 5, 5))
                 .into(holder.folderCover);
         holder.mView.setOnClickListener(new View.OnClickListener() {
@@ -52,14 +51,14 @@ public class RecycleViewListAdapter extends RecyclerView.Adapter<RecycleViewList
                 ShareButton shareButton = (ShareButton) shareView.findViewById(R.id.fb_share_button);
                 ShareLinkContent content = new ShareLinkContent.Builder()
                         .setContentUrl(Uri.parse("https://www.flickr.com"))
-                        .setImageUrl(Uri.parse(list.get(position).getUrl()))
+                        .setImageUrl(Uri.parse(list.get(position).getUrl_s()))
                         .setContentTitle("Look what i found on Flickr")
-                        .setContentDescription(list.get(position).getCaption())
+                        .setContentDescription(list.get(position).getTitle())
                         .build();
                 shareButton.setShareContent(content);
                 ImageView previewImage = (ImageView) shareView.findViewById(R.id.preview_image);
                 Glide.with(context)
-                        .load(list.get(position).getUrl())
+                        .load(list.get(position).getUrl_n())
                         .into(previewImage);
                 alertDialog.setView(shareView);
                 alertDialog.show();

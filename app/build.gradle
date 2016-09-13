@@ -32,4 +32,6 @@ dependencies {
     compile 'io.reactivex:rxjava:1.0.+'
     compile 'io.reactivex:rxandroid:0.23.+'
     compile 'com.squareup.retrofit:retrofit:1.9.+'
+    compile 'com.google.android.gms:play-services-maps:9.0.0'
+    compile 'com.google.maps.android:android-maps-utils:0.4.+'
 }

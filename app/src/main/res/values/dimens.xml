@@ -6,4 +6,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="padding_for_item">10dp</dimen>
+    <dimen name="small_padding">5dp</dimen>
+    <dimen name="progress_barr_margin">25dp</dimen>
 </resources>
