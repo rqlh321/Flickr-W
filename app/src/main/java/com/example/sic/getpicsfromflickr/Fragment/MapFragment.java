@@ -127,10 +127,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             }
         });
         refresh = (FloatingActionButton) view.findViewById(R.id.refresh);
+        if(currentPage==2){
+            refresh.setVisibility(View.INVISIBLE);
+        }
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                refresh.setVisibility(View.GONE);
+                refresh.setVisibility(View.INVISIBLE);
                 progressBar.setVisibility(View.VISIBLE);
                 if (mLatLng == null) {
                     getNewPhotosByQuery(searchView.getQuery().toString(), currentPage);
@@ -151,7 +154,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
-                refresh.setVisibility(View.GONE);
+                refresh.setVisibility(View.INVISIBLE);
                 progressBar.setVisibility(View.VISIBLE);
                 photos.clear();
                 mMap.clear();
@@ -292,7 +295,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                     @Override
                     public final void onNext(FlickrResult response) {
                         Log.i("Flickr", "it worked");
-                        //progressBar.setVisibility(View.GONE);
                         photos.addAll(response.photos.photo);
                         addMarker(photos);
                     }
