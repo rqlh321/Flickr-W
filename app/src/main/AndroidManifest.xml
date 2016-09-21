@@ -17,10 +17,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_api_key"/>
         <activity
-            android:name=".Activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
         <activity
-            android:name=".Activity.SplashActivity"
+            android:name=".activity.SplashActivity"
             android:theme="@style/SplashTheme"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait">

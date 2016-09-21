@@ -1,6 +1,6 @@
 package com.example.sic.getpicsfromflickr;
 
-import com.example.sic.getpicsfromflickr.Model.FlickrResult;
+import com.example.sic.getpicsfromflickr.model.FlickrResult;
 
 import retrofit.http.GET;
 import retrofit.http.Query;

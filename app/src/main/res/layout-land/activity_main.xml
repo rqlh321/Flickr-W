@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:background="@mipmap/background_landscape"
     android:layout_height="match_parent"
-    tools:context=".Activity.MainActivity">
+    tools:context=".activity.MainActivity">
 
     <FrameLayout
         android:id="@+id/container"
