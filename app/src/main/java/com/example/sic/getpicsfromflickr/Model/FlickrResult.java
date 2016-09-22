@@ -1,4 +1,4 @@
-package com.example.sic.getpicsfromflickr.Model;
+package com.example.sic.getpicsfromflickr.model;
 
 import com.google.gson.annotations.SerializedName;
 

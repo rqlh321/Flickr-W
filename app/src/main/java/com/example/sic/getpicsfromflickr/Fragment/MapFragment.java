@@ -1,4 +1,4 @@
-package com.example.sic.getpicsfromflickr.Fragment;
+package com.example.sic.getpicsfromflickr.fragment;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -26,10 +26,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.sic.getpicsfromflickr.Activity.MainActivity;
+import com.example.sic.getpicsfromflickr.activity.MainActivity;
 import com.example.sic.getpicsfromflickr.FlickrService;
-import com.example.sic.getpicsfromflickr.Model.FlickrResult;
-import com.example.sic.getpicsfromflickr.Model.Photo;
+import com.example.sic.getpicsfromflickr.model.FlickrResult;
+import com.example.sic.getpicsfromflickr.model.Photo;
 import com.example.sic.getpicsfromflickr.R;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareButton;

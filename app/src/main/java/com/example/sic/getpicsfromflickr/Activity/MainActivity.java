@@ -1,4 +1,4 @@
-package com.example.sic.getpicsfromflickr.Activity;
+package com.example.sic.getpicsfromflickr.activity;
 
 import android.graphics.Color;
 import android.net.ConnectivityManager;
@@ -11,8 +11,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.sic.getpicsfromflickr.Fragment.ListFragment;
-import com.example.sic.getpicsfromflickr.Model.Photo;
+import com.example.sic.getpicsfromflickr.fragment.ListFragment;
+import com.example.sic.getpicsfromflickr.model.Photo;
 import com.example.sic.getpicsfromflickr.R;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;

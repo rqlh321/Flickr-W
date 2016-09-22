@@ -1,4 +1,4 @@
-package com.example.sic.getpicsfromflickr.Model;
+package com.example.sic.getpicsfromflickr.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -1,15 +1,13 @@
-package com.example.sic.getpicsfromflickr.Fragment;
+package com.example.sic.getpicsfromflickr.fragment;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,13 +20,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
-import com.example.sic.getpicsfromflickr.Activity.MainActivity;
+import com.example.sic.getpicsfromflickr.activity.MainActivity;
 import com.example.sic.getpicsfromflickr.EndlessRecyclerOnScrollListener;
 import com.example.sic.getpicsfromflickr.FlickrService;
-import com.example.sic.getpicsfromflickr.Model.FlickrResult;
-import com.example.sic.getpicsfromflickr.Model.Photo;
+import com.example.sic.getpicsfromflickr.model.FlickrResult;
+import com.example.sic.getpicsfromflickr.model.Photo;
 import com.example.sic.getpicsfromflickr.R;
 import com.example.sic.getpicsfromflickr.RecycleViewListAdapter;
 

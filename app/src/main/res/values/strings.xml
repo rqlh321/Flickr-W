@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">getPicsFromFlickr</string>
+    <string name="app_name">My Flickr</string>
 
     <string name="search_in_flickr">Search in Flickr</string>
     <string name="add">Add from gallery</string>
